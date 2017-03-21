@@ -1,0 +1,37 @@
+<form class="form-horizontal" [formGroup]="productForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label for="marca">Marca:</label>
+    <select class="form-control" formControlName="marca">
+      <option *ngFor="let marca of marcas" [value]="marca">
+        {{marca}}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="modelo">Modelo:</label>
+    <input class="form-control" placeholder="Modelo" formControlName="modelo" />
+  </div>
+
+  <div class="form-group">
+    <label for="serie">Serie:</label>
+    <input class="form-control" placeholder="Serie" formControlName="serie" />
+  </div>
+
+  <div class="form-group">
+    <label for="tension">Tension:</label>
+    <input class="form-control" placeholder="Tension" formControlName="tension" />
+  </div>
+
+  <div class="form-group">
+    <label for="proveedor">Proveedor:</label>
+    <input class="form-control" placeholder="Proveedor" formControlName="proveedor" />
+  </div>
+
+  <div class="form-group">
+    <button type="reset" class="btn btn-default" (click)="reset()"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-send"></span> Enviar</button>
+  </div>
+  <p>Form value: {{ productForm.value | json }}</p>
+  <p>Form status: {{ productForm.status | json }}</p>
+</form>

@@ -1,0 +1,9 @@
+table thead{
+  background-color: #2938bc;
+  color: white;
+  padding: 8px;
+}
+
+table tbody tr:nth-child(odd){
+  background-color: #f1fff2;
+}

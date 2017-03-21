@@ -1,0 +1,30 @@
+
+
+<div class="table-responsive" style="overflow-y: scroll; max-height: 500px;">
+  <table class="table table-condensed table-hover" id="products-table">
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Serie</th>
+        <th>Tension</th>
+        <th>Proveedor</th>
+        <th>ubicacion</th>
+        <th>En contrato</th>
+        <th>Seleccion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products" (click)="onSelect(product)">
+        <td> {{ product.marca }} </td>
+        <td> {{ product.modelo }} </td>
+        <td> {{ product.serie }} </td>
+        <td> {{ product.tension }} </td>
+        <td> {{ product.proveedor }} </td>
+        <td> {{ product.ubicacion }} </td>
+        <td> {{ product.enContrato }} </td>
+        <td> <input type="radio" name="product-radio"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
